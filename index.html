@@ -1,0 +1,221 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Anas Raheem</title>
+    
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
+    <style>
+        :root {
+            --primary-color: #3498db;
+            --secondary-color: #2ecc71;
+            --background-color: #f4f7f6;
+        }
+
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background-color: var(--background-color);
+            color: #333;
+            line-height: 1.6;
+        }
+
+        @keyframes slideIn {
+            from { opacity: 0; transform: translateY(20px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+
+        @keyframes pulse {
+            0% { transform: scale(1); }
+            50% { transform: scale(1.05); }
+            100% { transform: scale(1); }
+        }
+
+        .hero {
+            background: linear-gradient(135deg, var(--primary-color), var(--secondary-color));
+            color: white;
+            padding: 100px 0;
+            text-align: center;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .hero-content {
+            position: relative;
+            z-index: 2;
+            animation: slideIn 1s ease-out;
+        }
+
+        .profile-img {
+            width: 250px;
+            height: 250px;
+            border-radius: 50%;
+            object-fit: cover;
+            border: 5px solid white;
+            box-shadow: 0 10px 25px rgba(0,0,0,0.2);
+            transition: transform 0.3s ease;
+        }
+
+        .profile-img:hover {
+            transform: scale(1.1);
+            animation: pulse 1.5s infinite;
+        }
+
+        .section {
+            padding: 80px 0;
+            opacity: 0;
+            transform: translateY(20px);
+            transition: all 0.8s ease;
+        }
+
+        .section.visible {
+            opacity: 1;
+            transform: translateY(0);
+        }
+
+        .skill-card {
+            background-color: white;
+            border-radius: 10px;
+            padding: 20px;
+            margin-bottom: 20px;
+            box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+            transition: transform 0.3s ease;
+        }
+
+        .skill-card:hover {
+            transform: translateY(-10px);
+        }
+
+        .project-card {
+            background-color: white;
+            border-radius: 10px;
+            overflow: hidden;
+            margin-bottom: 30px;
+            box-shadow: 0 10px 25px rgba(0,0,0,0.1);
+            transition: all 0.3s ease;
+        }
+
+        .project-card:hover {
+            transform: scale(1.03);
+            box-shadow: 0 15px 35px rgba(0,0,0,0.15);
+        }
+
+        .contact-icons a {
+            color: var(--primary-color);
+            margin: 0 15px;
+            font-size: 30px;
+            transition: color 0.3s ease;
+        }
+
+        .contact-icons a:hover {
+            color: var(--secondary-color);
+        }
+    </style>
+</head>
+<body>
+    
+    <section class="hero">
+        <div class="container hero-content">
+            <img src="https://synovate.pk/img/anas%20bhi.png" alt="Anas Raheem" class="profile-img mb-4">
+            <h1 class="display-4 fw-bold">Anas Raheem</h1>
+            <p class="lead">Full Stack Developer | Tech Innovator | Problem Solver</p>
+        </div>
+    </section>
+
+
+    <section class="section container text-center" id="about">
+        <h2 class="mb-4">About Me</h2>
+        <p class="lead">
+            Innovative software developer with a passion for creating cutting-edge digital solutions. 
+            Experienced in full-stack development, cloud technologies, and agile methodologies.
+        </p>
+    </section>
+
+
+    <section class="section container" id="skills">
+        <h2 class="text-center mb-5">Technical Skills</h2>
+        <div class="row">
+            <div class="col-md-4 mb-4">
+                <div class="skill-card text-center">
+                    <i class="fab fa-js fa-3x mb-3 text-warning"></i>
+                    <h4>JavaScript</h4>
+                    <p>Advanced proficiency in modern JavaScript and frameworks</p>
+                </div>
+            </div>
+            <div class="col-md-4 mb-4">
+                <div class="skill-card text-center">
+                    <i class="fab fa-react fa-3x mb-3 text-info"></i>
+                    <h4>React</h4>
+                    <p>Building interactive and responsive web applications</p>
+                </div>
+            </div>
+            <div class="col-md-4 mb-4">
+                <div class="skill-card text-center">
+                    <i class="fab fa-python fa-3x mb-3 text-primary"></i>
+                    <h4>Python</h4>
+                    <p>Backend development and data science solutions</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    
+    <section class="section container" id="projects">
+        <h2 class="text-center mb-5">Featured Projects</h2>
+        <div class="row">
+            <div class="col-md-4 mb-4">
+                <div class="project-card">
+                    <div class="card-body p-4">
+                        <h4 class="card-title">E-Commerce Platform</h4>
+                        <p class="card-text">Full-stack web application with React and Node.js</p>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-4 mb-4">
+                <div class="project-card">
+                    <div class="card-body p-4">
+                        <h4 class="card-title">AI Chatbot</h4>
+                        <p class="card-text">Machine learning-powered conversational interface</p>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-4 mb-4">
+                <div class="project-card">
+                    <div class="card-body p-4">
+                        <h4 class="card-title">Cloud Analytics Tool</h4>
+                        <p class="card-text">Data visualization and reporting application</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    
+    <section class="section container text-center" id="contact">
+        <h2 class="mb-4">Get in Touch</h2>
+        <div class="contact-icons mb-4">
+            <a href="https://www.linkedin.com/in/anasraheem/" target="_blank"><i class="fab fa-linkedin"></i></a>
+            <a href="https://github.com/anasraheemdev" target="_blank"><i class="fab fa-github"></i></a>
+            <a href="https://github.com/anasraheemdev" target="_blank"><i class="fas fa-envelope"></i></a>
+        </div>
+        <p>anasraheem@synovate.pk</p>
+    </section>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    <script>
+        // Scroll-triggered animations
+        window.addEventListener('scroll', function() {
+            var sections = document.querySelectorAll('.section');
+            sections.forEach(function(section) {
+                var position = section.getBoundingClientRect().top;
+                var windowHeight = window.innerHeight;
+                if(position < windowHeight * 0.8) {
+                    section.classList.add('visible');
+                }
+            });
+        });
+    </script>
+</body>
+</html>
